@@ -1,4 +1,2 @@
-module Coldshoulder
-  class Executor
-  end
+module Coldshoulder::Executor
 end

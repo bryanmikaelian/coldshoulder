@@ -1,0 +1,3 @@
+module Coldshoulder::Commands
+
+end
