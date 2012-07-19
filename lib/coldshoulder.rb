@@ -1,6 +1,5 @@
 require "coldshoulder/version"
-require "coldshoulder/executor"
-require "coldshoulder/commands"
+require 'coldshoulder/parser'
 
 module Coldshoulder
 
