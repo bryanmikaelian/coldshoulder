@@ -2,12 +2,12 @@ require 'optparse'
 
 module Coldshoulder
 
-  module Parser
+  class Options
 
-    def self.parse
-
+    def options
+      @options
     end
-    
+
   end
 
 end
