@@ -1,2 +1,0 @@
-module Coldshoulder::Executor
-end
