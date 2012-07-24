@@ -4,8 +4,8 @@ module Coldshoulder
 
     attr_reader :target_language
 
-    def initialize(args = nil)
-      @target_language = args
+    def initialize(*args)
+      @target_language = args.shift
     end
 
     def request_url(url)
