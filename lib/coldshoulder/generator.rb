@@ -14,7 +14,7 @@ module Coldshoulder
 
     def generate
       puts 'Generating gitignore file...'
-      r = request_url("https://raw.github.com/github/gitignore/master/#{@target_language}}.gitignore")
+      r = request_url("https://raw.github.com/github/gitignore/master/#{@target_language}.gitignore")
       if r.response_code == 200
         File.open('.gitignore', 'w') do |f|
           f.write("#\n# Generating using coldshoulder - github.com/bryanmikaelian/coldshoulder\n#\n#{r.body_str}")

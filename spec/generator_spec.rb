@@ -12,7 +12,10 @@ describe Coldshoulder::Generator do
   end
 
   it 'generates a gitignore file' do
-    Coldshoulder::Generator.new('Ruby').should respond_to(:generate)
+    file = mock('file')
+    File.should_receive(:open).with(".gitignore", "w").and_yield(file)
+    file.should_receive(:write)
+    Coldshoulder::Generator.new('Ruby').generate
   end
 
 end
