@@ -1,0 +1,5 @@
+#!/usr/bin/env/ ruby 
+
+require 'coldshoulder'
+
+Coldshoulder::Generator.new(ARGV[0]).generate
