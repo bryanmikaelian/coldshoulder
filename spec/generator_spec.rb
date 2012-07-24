@@ -18,4 +18,10 @@ describe Coldshoulder::Generator do
     Coldshoulder::Generator.new('Ruby').generate
   end
 
+  it 'does not generate a gitignore file when a bad language is provided' do
+    file = mock('file')
+    File.should_not_receive(:open)
+    Coldshoulder::Generator.new('PythonRubySharp').generate
+  end
+
 end
