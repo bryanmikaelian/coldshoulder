@@ -1,6 +1,6 @@
 # Coldshoulder
 
-TODO: Write a gem description
+Generate those gitignore files with ease.
 
 ## Installation
 
@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+coldshoulder [Language name]
+
+Note:  You have to specify the exact name of the file in the following repo https://github.com/github/gitignore .  This will be fixed in a future release.
 
 ## Contributing
 
