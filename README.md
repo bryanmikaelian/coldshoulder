@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-coldshoulder [Language name]
+    coldshoulder [Language name]
 
 Note:  You have to specify the exact name of the file in the following repo https://github.com/github/gitignore .  This will be fixed in a future release.
 
