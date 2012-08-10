@@ -2,4 +2,9 @@
 
 require 'coldshoulder'
 
-Coldshoulder::Generator.new(ARGV[0]).generate
+
+run = Proc.new do
+  Coldshoulder::Generator.new(ARGV[0]).generate
+end
+
+run.call
