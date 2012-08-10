@@ -12,7 +12,7 @@ module Coldshoulder
       Curl::Easy.perform(url)
     end
 
-    def generate
+    def generate!
       build_ignore_file
     end
 
