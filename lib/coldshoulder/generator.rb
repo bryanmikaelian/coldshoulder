@@ -2,8 +2,6 @@ module Coldshoulder
 
   class Generator
 
-    attr_reader :target_language
-
     def request_url(url)
       Curl::Easy.perform(url)
     end
