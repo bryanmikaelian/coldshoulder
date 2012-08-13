@@ -14,7 +14,7 @@ In the root of the directory, enter the following command:
 
 Boom.  You now have a gitignore file generated from the templates that GitHub uses.  Easy huh?
 
-Note:  You have to specify the exact name of the file in the following repo https://github.com/github/gitignore .  This will be fixed in a future release.
+Note:  You have to specify the exact name of the file in [GitHub's repo](https://github.com/github/gitignore).  This might change to be a little more flexible.
 
 
 ## Contributing
