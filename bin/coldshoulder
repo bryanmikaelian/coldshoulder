@@ -2,4 +2,4 @@
 
 require 'coldshoulder'
 
-Coldshoulder::Commander.new(ARGV)
+Coldshoulder::Commander.new(ARGV).generate!

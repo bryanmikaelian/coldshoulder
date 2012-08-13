@@ -7,10 +7,15 @@ module Coldshoulder
     def initialize(*args)
       self.command = args.shift
       self.language = args.shift
+      generate!
+    end
+
+    def generate!
       puts "Generating gitignore file..."
       process
     end
 
+    protected
 
     def process
       if self.command == "generate"
