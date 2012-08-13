@@ -11,7 +11,7 @@ module Coldshoulder
     end
 
     def generate!
-      Coldshoulder::Generator.new.build(@language)
+      Coldshoulder::Generator.new.build(self.language)
     end
 
   end
