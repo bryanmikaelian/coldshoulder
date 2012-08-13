@@ -2,9 +2,4 @@
 
 require 'coldshoulder'
 
-
-run = Proc.new do
-  Coldshoulder::Commander.new(ARGV)
-end
-
-run.call
+Coldshoulder::Commander.new(ARGV)
