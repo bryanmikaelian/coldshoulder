@@ -7,7 +7,6 @@ module Coldshoulder
     def initialize(*args)
       self.command = args.shift
       self.language = args.shift
-      generate!
     end
 
     def generate!
