@@ -16,7 +16,7 @@ module Coldshoulder
         end
         puts "Ignore file generated for language #{language}"
       else 
-        puts "The gitignore file could not be generated. Ignore file for the language #{language} not found"
+        puts "The gitignore file could not be generated. Language #{language} not found"
       end
     end
 
