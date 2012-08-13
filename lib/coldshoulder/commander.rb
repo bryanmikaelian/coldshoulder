@@ -5,8 +5,9 @@ module Coldshoulder
     attr_accessor :command, :language
 
     def initialize(*args)
-      puts 'Init'
       puts *args
+      puts *args[0]
+      puts *args[1]
       self.command = args.shift
       self.language = args.shift
       generate!
@@ -19,8 +20,7 @@ module Coldshoulder
     protected
 
     def process
-      puts "Process"
-      if self.command == "generate"
+      if self.command === "generate"
         puts 'Calling build in Coldshoulder::Generator'
         Coldshoulder::Generator.new.build(self.language)
       end
