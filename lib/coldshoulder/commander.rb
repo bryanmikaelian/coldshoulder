@@ -6,6 +6,7 @@ module Coldshoulder
 
     def initialize(*args)
       puts 'Init'
+      puts *args
       self.command = args.shift
       self.language = args.shift
       generate!
