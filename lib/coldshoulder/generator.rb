@@ -8,6 +8,7 @@ module Coldshoulder
 
 
     def build(language)
+      puts 'Generating gitignore file...'
       r = request_url("https://raw.github.com/github/gitignore/master/#{language}.gitignore")
       if r.response_code == 200 
         File.open('.gitignore', 'w') do |f|

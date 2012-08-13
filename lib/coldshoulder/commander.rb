@@ -11,7 +11,6 @@ module Coldshoulder
     end
 
     def generate!
-      puts "Generating gitignore file..."
       process
     end
 
@@ -19,10 +18,7 @@ module Coldshoulder
 
     def process
       if self.command == "generate"
-        if self.language
-          puts "Target language: #{self.language}"
-          Coldshoulder::Generator.new.build(self.language)
-        end
+        Coldshoulder::Generator.new.build(self.language)
       end
     end
   end

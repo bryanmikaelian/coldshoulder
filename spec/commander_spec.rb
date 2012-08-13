@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Coldshoulder::Commander do
 
   it 'takes in a command' do
-    Coldshoulder::Commander.new("generate").command.should == "generate"
+    Coldshoulder::Commander.new("generate", "Python").command.should == "generate"
   end
 
   it 'takes in a language' do
