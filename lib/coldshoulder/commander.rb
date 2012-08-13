@@ -2,10 +2,11 @@ module Coldshoulder
 
   class Commander 
 
-    attr_accessor :command
+    attr_accessor :command, :language
 
     def initialize(*args)
       self.command = args.shift
+      self.language = args.shift
       process
     end
 
