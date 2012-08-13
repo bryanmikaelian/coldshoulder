@@ -4,7 +4,8 @@ require 'coldshoulder'
 
 
 run = Proc.new do
-  Coldshoulder::Generator.new(ARGV[0]).generate!
+  # Coldshoulder::Generator.new(ARGV[0]).generate!
+  Coldshoulder::Commander.new(ARGV)
 end
 
 run.call
