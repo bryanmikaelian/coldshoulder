@@ -4,30 +4,20 @@ module Coldshoulder
 
     attr_reader :target_language
 
-    def initialize(*args)
-      @target_language = args.shift
-    end
-
     def request_url(url)
       Curl::Easy.perform(url)
     end
 
-    def generate!
-      build_ignore_file
-    end
 
-    protected 
-
-    def build_ignore_file
-      puts 'Generating gitignore file...'
-      r = request_url("https://raw.github.com/github/gitignore/master/#{@target_language}.gitignore")
-      if r.response_code == 200
+    def build(language)
+      r = request_url("https://raw.github.com/github/gitignore/master/#{language}.gitignore")
+      if r.response_code == 200 && language
         File.open('.gitignore', 'w') do |f|
           f.write("#\n# Generating using coldshoulder - github.com/bryanmikaelian/coldshoulder\n#\n\n#{r.body_str}")
         end
-        puts "Ignore file generated for language #{@target_language}"
+        puts "Ignore file generated for language #{language}"
       else 
-        puts "The gitignore file could not be generated. Ignore file for the language #{@target_language} not found"
+        puts "The gitignore file could not be generated. Ignore file for the language #{language} not found"
       end
     end
 
