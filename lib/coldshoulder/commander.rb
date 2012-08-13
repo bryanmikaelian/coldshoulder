@@ -5,8 +5,8 @@ module Coldshoulder
     attr_accessor :command, :language
 
     def initialize(*args)
-      self.command = args[0]
-      self.language = args[1]
+      self.command = args.shift.to_s
+      self.language = args.shift
       generate!
     end
 
