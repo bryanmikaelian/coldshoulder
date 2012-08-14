@@ -7,4 +7,3 @@ group :development, :test do
 end
 
 gem 'curb'
-gem 'subcommand'
