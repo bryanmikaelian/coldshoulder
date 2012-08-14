@@ -10,7 +10,12 @@ module Coldshoulder
     end
 
     def generate!
-      Coldshoulder::Generator.new.build(self.language)
+      case self.command
+      when  "generate"
+        Coldshoulder::Generator.new.build(self.language)
+      when "-v"
+        puts "Current version: #{Coldshoulder::VERSION}"
+      end
     end
 
   end

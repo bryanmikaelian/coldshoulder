@@ -16,5 +16,5 @@ describe Coldshoulder::Commander do
     file.should_receive(:write)
     Coldshoulder::Commander.new({:command => "generate", :language => "Ruby"}).generate!
   end
-  
+
 end
