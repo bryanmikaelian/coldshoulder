@@ -4,7 +4,7 @@ require File.expand_path('../lib/coldshoulder/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Bryan Mikaelian"]
   gem.email         = ["bryan.mikaelian@gmail.com"]
-  gem.description   = %q{Ignore those files.}
+  gem.description   = %q{Generate gitignore files with ease.}
   gem.summary       = %q{Written in Ruby, coldshoulder is a command line tool that will let you easily generate a gitignore file.}
   gem.homepage      = ""
 
