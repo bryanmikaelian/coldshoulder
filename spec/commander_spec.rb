@@ -18,8 +18,8 @@ describe Coldshoulder::Commander do
   end
 
   it 'it will not generate a gitingore file if generate is not specified' do
-    Coldshoulder::Commander.should_not_receive(:generate!)
-    Coldshoulder::Commander.new({:command => "generate", :language => "Ruby"})
+    Coldshoulder::Generator.should_not_receive(:build)
+    Coldshoulder::Commander.new({:command => "-v", :language => "Ruby"})
   end
 
 
