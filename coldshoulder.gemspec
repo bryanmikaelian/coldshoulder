@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["bryan.mikaelian@gmail.com"]
   gem.description   = %q{Generate gitignore files with ease.}
   gem.summary       = %q{Written in Ruby, coldshoulder is a command line tool that will let you easily generate a gitignore file.}
-  gem.homepage      = ""
+  gem.homepage      = "https://www.github.com/bryanmikaelian/coldshoulder"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
