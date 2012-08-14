@@ -14,7 +14,13 @@ describe Coldshoulder::Commander do
     file = mock('file')
     File.should_receive(:open).with(".gitignore", "w").and_yield(file)
     file.should_receive(:write)
-    Coldshoulder::Commander.new({:command => "generate", :language => "Ruby"}).generate!
+    Coldshoulder::Commander.new({:command => "generate", :language => "Ruby"})
   end
+
+  it 'it will not generate a gitingore file if generate is not specified' do
+    Coldshoulder::Commander.should_not_receive(:generate!)
+    Coldshoulder::Commander.new({:command => "generate", :language => "Ruby"})
+  end
+
 
 end
