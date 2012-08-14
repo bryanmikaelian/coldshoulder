@@ -15,6 +15,8 @@ module Coldshoulder
         Coldshoulder::Generator.new.build(self.language)
       when "-v"
         puts "Current version: #{Coldshoulder::VERSION}"
+      else
+        puts "Usage: coldshoulder [options]"
       end
     end
 
