@@ -5,5 +5,4 @@ require 'coldshoulder/commander'
 module Coldshoulder
   require 'curb'
   require 'optparse'
-
 end
