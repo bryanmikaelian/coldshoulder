@@ -4,6 +4,6 @@ require 'coldshoulder/commander'
 
 module Coldshoulder
   require 'curb'
-  require 'optparser'
+  require 'optparse'
 
 end
