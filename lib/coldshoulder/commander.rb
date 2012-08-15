@@ -12,7 +12,6 @@ module Coldshoulder
     end
 
     def parse!(commands) 
-      puts commands
       options = {}
       if self.command == "generate"
         generate!
