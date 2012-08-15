@@ -8,11 +8,7 @@ module Coldshoulder
       self.language = arg_hash[:language]
       self.command = arg_hash[:command]
       self.optional = arg_hash[:optional]
-      if self.command == "generate"
-        generate!
-      else
-        parse!([self.command, self.optional])
-      end
+      parse!([self.command, self.optional])
     end
 
     def parse!(commands) 
