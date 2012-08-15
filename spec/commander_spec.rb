@@ -22,5 +22,4 @@ describe Coldshoulder::Commander do
     Coldshoulder::Commander.new({:command => "-v", :language => "Ruby"})
   end
 
-
 end
