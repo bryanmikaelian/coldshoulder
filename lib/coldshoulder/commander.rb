@@ -2,15 +2,16 @@ module Coldshoulder
 
   class Commander 
 
-    attr_accessor :command, :language
+    attr_accessor :command, :language, :optional
 
     def initialize(arg_hash)
       self.language = arg_hash[:language]
       self.command = arg_hash[:command]
+      self.optional = arg_hash[:optional]
       if self.command == "generate"
         generate!
       else
-        parse!([self.command])
+        parse!([self.command, self.optional])
       end
     end
 
