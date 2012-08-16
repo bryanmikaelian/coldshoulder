@@ -1,9 +1,10 @@
 module Coldshoulder
   module Display
 
-    def self.message(message)
+    def message(message)
       puts message
     end
 
   end
+  extend Display
 end
