@@ -36,7 +36,11 @@ module Coldshoulder
 
     def run! 
       command = args.shift
-      unless command
+      case command
+      when "generate"
+        language = args.shift
+        Coldshoulder::Generator.new.build(language)
+      when nil
         command = "--help"
       end
       begin

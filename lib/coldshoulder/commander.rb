@@ -20,7 +20,7 @@ module Coldshoulder
         opts = OptionParser.new do |opts|
           opts.banner = "Usage: coldshoulder [options] [template name]"
           opts.separator ""
-          opts.separator "Commands: "
+          opts.separator "Options: "
 
           opts.on_tail("-v", "--version", "Display the version") do
             puts "Current version: #{Coldshoulder::VERSION}"

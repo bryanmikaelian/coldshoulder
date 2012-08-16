@@ -19,4 +19,11 @@ describe Coldshoulder::Director do
     Coldshoulder::Director.new(["-h", "--help"]).direct!
   end
 
+  it 'drives the generation of a gitignore file' do
+    file = mock('file')
+    File.should_receive(:open).with(".gitignore", "w").and_yield(file)
+    file.should_receive(:write)
+    Coldshoulder::Director.new(["generate", "Ruby"]).direct!
+  end
+
 end
