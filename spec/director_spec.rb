@@ -9,4 +9,9 @@ describe Coldshoulder::Director do
     Coldshoulder::Director.new(@arguements).args.should == @arguements
   end
 
+  it 'can display the version' do
+    Coldshoulder::Display.should_receive(:message).with("Current version: #{Coldshoulder::VERSION}")
+    Coldshoulder::Director.new(["-v"]).direct!
+  end
+
 end

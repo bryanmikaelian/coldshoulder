@@ -19,7 +19,7 @@ module Coldshoulder
         opts.separator "Commands: "
 
         opts.on_tail("-v", "--version", "Display the version") do
-          puts "Current version: #{Coldshoulder::VERSION}"
+          Coldshoulder::Display.message "Current version: #{Coldshoulder::VERSION}"
         end
 
         opts.on_tail("-h", "--help", "Displays this message") do
