@@ -8,6 +8,15 @@ module Coldshoulder
       self.args = args
     end
 
+    def direct!
+      run!
+    end
+
+
+    def run! 
+
+    end
+
   end
 
 end
