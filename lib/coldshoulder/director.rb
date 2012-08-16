@@ -12,6 +12,7 @@ module Coldshoulder
       run!
     end
 
+    protected
 
     def run! 
 
