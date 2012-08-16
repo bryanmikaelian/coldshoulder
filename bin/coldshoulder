@@ -2,5 +2,4 @@
 
 require 'coldshoulder'
 
-# Coldshoulder::Commander.new({:command => ARGV[0], :language => ARGV[1], :optional => ARGV[2]})
 Coldshoulder::Director.new(ARGV).direct!

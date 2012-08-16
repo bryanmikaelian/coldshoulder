@@ -28,8 +28,8 @@ module Coldshoulder
       end
     end
 
-    def parse!
-      opts.parse!(arguements)
+    def parse!(command)
+      opts.parse!(command)
     end
 
     protected
@@ -44,7 +44,7 @@ module Coldshoulder
         command = "--help"
       end
       begin
-        opts.parse!([command])
+        parse!([command])
       rescue OptionParser::ParseError => e
         puts "Error: #{e.message}"
       end
