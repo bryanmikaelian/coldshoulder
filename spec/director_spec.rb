@@ -11,7 +11,12 @@ describe Coldshoulder::Director do
 
   it 'can display the version' do
     Coldshoulder::Display.should_receive(:message).with("Current version: #{Coldshoulder::VERSION}")
-    Coldshoulder::Director.new(["-v"]).direct!
+    Coldshoulder::Director.new(["-v", "--version"]).direct!
+  end
+
+  it 'can display the help' do
+    Coldshoulder::Display.should_receive(:message)
+    Coldshoulder::Director.new(["-h", "--help"]).direct!
   end
 
 end

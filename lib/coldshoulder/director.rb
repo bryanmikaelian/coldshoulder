@@ -23,7 +23,7 @@ module Coldshoulder
         end
 
         opts.on_tail("-h", "--help", "Displays this message") do
-          puts opts
+          Coldshoulder::Display.message opts
         end
       end
     end
