@@ -1,8 +1,12 @@
 require 'spec_helper'
 
 describe Coldshoulder::Director do
-  it 'takes in the ARGV values' do
-    arguments = ["-v", "generate"]
-    Coldshoulder::Director.new(arguments).args.should == arguments
+  before :each do
+    @arguements = ["-v", "generate"]
   end
+
+  it 'takes in the ARGV values' do
+    Coldshoulder::Director.new(@arguements).args.should == @arguements
+  end
+
 end
